@@ -9,20 +9,7 @@
 
     <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/aes.js"></script>
 
-    <script>
-      var decoder = {
-        getPassword: function() {
-          this.password = prompt("Enter password to decode the message")
-        },
-        decryptMessage: function() {
-          this.message = document.URL.split('?')[1]
-        },
-        decrypt: function() {
-          this.getPassword()
-          this.decryptMessage()
-          alert(CryptoJS.AES.decrypt(this.message, this.password).toString(CryptoJS.enc.Utf8))
-        }
-      }
-    </script>
+    <script src="src/decoder.js"></script>
+
   </body>
 </html>
