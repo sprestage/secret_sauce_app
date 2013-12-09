@@ -9,16 +9,22 @@ Setup
 
 Put this in your .profile so you can run 'serve' at your command line.  This runs a mini (webrick) web server.
 
-<code>function serve() {
+<pre>
+function serve() {
   port="${1:-4000}"
   ruby -r webrick -e "s = WEBrick::HTTPServer.new(:Port => $port, :DocumentRoot => Dir.pwd); trap('INT') { s.shutdown }; s.start"
-}</code>
+}
+</pre>
 
 You will either need to source your .profile at this point or open a new terminal.
-  > source ~/.profile
+<pre>
+source ~/.profile
+</pre>
 
 To run the server (on port 3001) at the command line, type:
-  > serve 3001
+<pre>
+serve 3001
+</pre>
 
 Copy the decode.html and index.html files onto your machine.  Store them together in the same directory.
 
