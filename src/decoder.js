@@ -9,6 +9,6 @@ var decoder = {
   decrypt: function() {
     this.getPassword()
     this.decryptMessage()
-    alert(CryptoJS.AES.decrypt(this.message, this.password).toString(CryptoJS.enc.Utf8))
+    return CryptoJS.AES.decrypt(this.message, this.password).toString(CryptoJS.enc.Utf8)
   }
 }
